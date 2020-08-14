@@ -1,24 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      string: "Hi! iffishells"
+    }
+  }
+  render() {
+    return (<div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1> Hellow world </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={logo} className="App-logo" alt="logo"/>
+        <h1>
+          {this.state.string}
+        </h1>
+          <button onClick  = { ()=>this.setState({
+              string : "change to iffikhar"
+            })}>change
+          </button>
       </header>
-    </div>
-  );
-}
+    </div>)
+  }
 
+}
 export default App;
