@@ -3,26 +3,31 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() {
+  constructor()
+  {
     super();
-    this.state = {
-      string: "Hi! iffishells"
-    }
-  }
-  render() {
-    return (<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <h1>
-          {this.state.string}
-        </h1>
-          <button onClick  = { ()=>this.setState({
-              string : "change to iffikhar"
-            })}>change
-          </button>
-      </header>
-    </div>)
-  }
 
-}
+    this.state =
+    {
+      monstar : [
+        {
+          name  : "Daracula"
+        },
+        {
+          name  : "Hell Boy"
+        },
+        {
+          name : "iftikar"
+        }
+      ]
+    };
+  };
+
+  render()
+  {
+    return(
+
+    );
+  };
+};
 export default App;
