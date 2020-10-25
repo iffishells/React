@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-
+          <button onClick= {() => this.setState({lname : "ifti"})}> Show your self </button>
           <p><h1>{ this.state.fname } </h1>
           <h1>{this.state.lname} </h1>
           <h1> {this.state.dob} </h1>
