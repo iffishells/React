@@ -7,32 +7,32 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      fname : "Muhammad",
-      lname : "iftikhar",
-      dob : "1998/9/3"
+      monster : [
+        {
+          name : "SpiderMen",
+          key : '1'
+        },
+        {
+          name : "SuperMen",
+          key : '2'
+
+        },
+        {
+          name : "BikeMen",
+          key : '3'
+        }
+      ]
     }
-  }
-  render(){
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <button onClick= {() => this.setState({lname : "ifti"})}> Show your self </button>
-          <p><h1>{ this.state.fname } </h1>
-          <h1>{this.state.lname} </h1>
-          <h1> {this.state.dob} </h1>
-          <h1>now updated </h1> </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+};
+      render(){
+        return(
+            <div className= 'App'>
+              {
+                this.state.monster.map(monster => <h1 key= {monster.key}> {monster.name}  </h1>)
+              }
+            </div>
+        );
+      }
 }
+
 export default App;
