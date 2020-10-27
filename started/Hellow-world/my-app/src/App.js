@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
 
@@ -7,23 +6,16 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      monster : [
-        {
-          name : "SpiderMen",
-          key : '1'
-        },
-        {
-          name : "SuperMen",
-          key : '2'
-
-        },
-        {
-          name : "BikeMen",
-          key : '3'
-        }
-      ]
+      monster : []
     }
+
 };
+  componetDidMount()
+  {
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => console.log(response))
+  }
       render(){
         return(
             <div className= 'App'>
